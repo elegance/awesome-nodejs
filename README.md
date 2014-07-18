@@ -1,8 +1,11 @@
 # Awesome Node.js
+# 神奇的Node.js
 
-A curated list of astonishing Node.js frameworks, libraries and resources. Inspired by [awesome-php](https://github.com/ziadoz/awesome-php) and [awesome-python](https://github.com/vinta/awesome-python).
+A curated list of astonishing Node.js frameworks, libraries and resources. 
 
-Your pull requests are very welcome! Let's make this the awesomest resource for Node!
+这是一个关于Node.js的框架，库和资源的列表。
+
+目录:
 
 - [Awesome Node.js](#awesome-nodejs)
     - [Environment Management](#environment-management)
@@ -27,12 +30,33 @@ Your pull requests are very welcome! Let's make this the awesomest resource for 
 - [Other Awesome Lists](#other-awesome-lists)
 
 ## Environment Management
+## 环境管理
 
 *Libraries for Node version and environment management.*
 
+*管理Node版本和环境的库*
+
 * [nodeenv](https://github.com/ekalinin/nodeenv) - Virtual environment for Node.js & integrator with virtualenv.
+
+    独立的Node.js运行环境(Python写，未使用过)
+
 * [nave](https://github.com/isaacs/nave) - Virtual Environments for Node.
+
+    似乎不错(sh脚本，未使用过)
+
 * [n](https://github.com/visionmedia/n) - Node version management.
+
+    安装不同版本的node，可以多个版本的node并存
+    
+## Desktop App
+## 桌面应用
+
+* [atom-shell](https://github.com/atom/atom-shell) -
+可以使用nodejs编写桌面应用，并且跨平台，支持mac，linux，windows，与[node-webkit](https://github.com/rogerwang/node-webkit)的区别在于，前者启动时是启动js文件，后者启动html文件，前者可控性更高。
+
+node-webkit案例:[LightTable](https://github.com/LightTable/LightTable)
+atom-shell案例:[Atom](https://github.com/atom/atom)
+
 
 ## Integrated Development Enviroments
 
