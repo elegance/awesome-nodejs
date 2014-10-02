@@ -1,33 +1,35 @@
 # Awesome Node.js
-# 神奇的Node.js
+# 精彩的Node.js
 
-A curated list of astonishing Node.js frameworks, libraries and resources. 
+受到[精彩的php](https://github.com/ziadoz/awesome-php) 和 [精彩的python](https://github.com/vinta/awesome-python) 的启发，整理了精彩的Node.js的框架，库以及资源的列表。
 
-这是一个关于Node.js的框架，库和资源的列表。
+欢迎提交各种相关资源！让我们一起来打造最精彩的Node资源列表！
 
 目录:
 
-- [Awesome Node.js](#awesome-nodejs)
-    - [Environment Management](#environment-management)
-    - [Integrated Development Enviroments](#integrated-development-enviroments)
-    - [Documentation](#documentation)
-    - [Package Management](#package-management)
-    - [Build Tools](#build-tools)
-    - [Communication](#communication)
-    - [Database Drivers](#database-drivers)
-    - [Debugging Tools](#debugging-tools)
-    - [Logging](#logging)
+- [精彩的Node.js](#awesome-nodejs)
+    - [环境管理](#environment-management)
+    - [桌面应用](#desktop-app)
+    - [集成开发环境](#integrated-development-enviroments)
+    - [文档](#documentation)
+    - [包管理](#package-management)
+    - [生成工具](#build-tools)
+    - [通讯](#communication)
+    - [数据库驱动](#database-drivers)
+    - [调试工具](#debugging-tools)
+    - [日志](#logging)
     - [ORM](#orm)
-    - [Web Frameworks](#web-frameworks)
-    - [Content Management System](#content-management-system)
+    - [Web框架](#web-frameworks)
+    - [应用服务](#application-servers)
+    - [CMS](#content-management-system)
     - [RESTful API](#restful-api)
-    - [Files and MIME Type Manipulation](#files-and-mime-type-manipulation)
-    - [Authentication and OAuth](#authentication-and-oauth)
-    - [Template Engine](#template-engine)
-    - [Tools for building CLIs](#tools-for-building-clis)
-    - [Async Controll Flow](#async-control-flow)
-    - [Testing](#testing)
-- [Other Awesome Lists](#other-awesome-lists)
+    - [文件和MIME类型操作](#files-and-mime-type-manipulation)
+    - [验证和OAuth](#authentication-and-oauth)
+    - [模版引擎](#template-engine)
+    - [生成CLI的工具](#tools-for-building-clis)
+    - [异步流程控制](#async-control-flow)
+    - [测试](#testing)
+- [其它精彩列表](#other-awesome-lists)
 
 ## Environment Management
 ## 环境管理
@@ -59,6 +61,7 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 
 
 ## Integrated Development Enviroments
+## 集成开发环境
 
 *IDEs and Editors for development*
 
@@ -72,6 +75,7 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 * [CmdEr](https://github.com/bliker/cmder) - Not really and IDE, but a great "lovely console emulator package for Windows"
 
 ## Documentation
+## 文档
 
 *Libraries for generating project documentation.*
 
@@ -80,12 +84,14 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 * [dox](https://github.com/visionmedia/dox) - JavaScript documentation generator for node using markdown and jsdoc.
 
 ## Package Management
+## 包管理
 
 *Libraries for package and dependency management.*
 
 * [Npm](https://www.npmjs.org/) - Default package manager. Installs, publishes and manages node programs.
 
 ## Build Tools
+## 生成工具
 
 *Libraries for building and task running*
 
@@ -94,11 +100,13 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 * [Nodemon](http://nodemon.io/) - A dev utility that monitor any changes in source and automatically restart server.
 
 ## Communication
+## 通讯
 
 * [Socket.IO](http://socket.io/) - Websocket framework for Node and Javascript.
 * [Primus](https://github.com/primus/primus) - An abstraction layer for real-time frameworks to prevent module lock-in.
 
 ## Database Drivers
+## 数据库驱动
 
 *Libraries for connecting and operating databases*
 
@@ -106,6 +114,7 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 * [Node-mongodb-native](https://github.com/mongodb/node-mongodb-native/) - Mongo DB Native NodeJS Driver.
 
 ## Debugging Tools
+## 调试工具
 
 *Tools for debugging Node applications*
 
@@ -114,6 +123,7 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 * [TypesJs](https://github.com/ChrisAntaki/typesjs) - Easy type checking, for Node & browsers.
 
 ## Logging
+## 日志
 
 *Tools for generating and working with log files.*
 
@@ -130,6 +140,7 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 * [Mongoose](http://mongoosejs.com/) - Almost an ORM for mongodb.
 
 ## Web Frameworks
+## Web框架
 
 *Web development frameworks.*
 
@@ -141,12 +152,14 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 * [Hapi](https://github.com/spumko/hapi) - A rich framework for building applications and services.
 
 ## Application Servers
+## 应用服务
 
 *Application Server is an environment to run and manage multiple applications.*
 
 * [Impress](https://github.com/tshemsedinov/impress) - Impressive multipurpose scalable Application Server optimized for high load API and web applications.
 
 ## Content Management System
+## CMS
 
 * [Calipso](http://calip.so/) - Calipso is a simple CMS, built along similar themes to Drupal and Wordpress.
 
@@ -159,10 +172,12 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 * [Heimdall](https://github.com/binarymax/heimdall) - REST API Guardian for Express.
 
 ## Files and MIME Type Manipulation
+## 文件和MIME类型操作
 
 * [PDFKit](http://pdfkit.org/) - A JavaScript PDF generation library for Node and browser.
 
 ## Authentication and OAuth
+## 验证和OAuth
 
 *Libraries for implementing authentications schemes.*
 
@@ -170,6 +185,7 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 * [ldapjs](http://ldapjs.org/) - Pure JavaScript, from-scratch framework for implementing LDAP clients and servers.
 
 ## Template Engine
+## 模版引擎
 
 *Libraries and tools for templating and lexing.*
 
@@ -178,6 +194,7 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 * [Swig](http://paularmstrong.github.io/swig/) - A simple, powerful, and extendable JavaScript Template Engine.
 
 ## Tools for building CLIs
+## 生成CLI的工具
 
 *Libraries and tools which support you by building Command-Line Interfaces.*
 
@@ -197,6 +214,7 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 * [text-table](https://github.com/substack/text-table) - generate borderless text table strings suitable for printing to stdout.
 
 ## Async Control Flow
+## 异步流程控制
 
 *Libraries, that help you manage asyncronous control flow and avoid callback hell.*
 
@@ -213,6 +231,7 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
     * [Co](https://github.com/visionmedia/co) - Generator based flow-control goodness for nodejs and the browser.
 
 ## Testing
+## 测试
 
 *Testing frameworks.*
 
@@ -222,6 +241,7 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 * [chai](https://github.com/chaijs/chai) - BDD / TDD assertion framework for node.js and the browser that can be paired with any testing framework.
 
 # Other Awesome Lists
+# 其它精彩列表
 Other amazingly awesome lists can be found in the [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness) list.
 
 # Contributing
