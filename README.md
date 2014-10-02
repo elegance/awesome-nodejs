@@ -1,4 +1,3 @@
-# Awesome Node.js
 # 精彩的Node.js
 
 受到[精彩的php](https://github.com/ziadoz/awesome-php) 和 [精彩的python](https://github.com/vinta/awesome-python) 的启发，整理了精彩的Node.js的框架，库以及资源的列表。
@@ -7,243 +6,273 @@
 
 目录:
 
-- [精彩的Node.js](#awesome-nodejs)
-    - [环境管理](#environment-management)
-    - [桌面应用](#desktop-app)
-    - [集成开发环境](#integrated-development-enviroments)
-    - [文档](#documentation)
-    - [包管理](#package-management)
-    - [生成工具](#build-tools)
-    - [通讯](#communication)
-    - [数据库驱动](#database-drivers)
-    - [调试工具](#debugging-tools)
-    - [日志](#logging)
+- [精彩的Node.js](#精彩的Nodejs)
+    - [环境管理](#环境管理)
+    - [桌面应用](#桌面应用)
+    - [集成开发环境](#集成开发环境)
+    - [文档](#文档)
+    - [包管理](#包管理)
+    - [生成工具](#生成工具)
+    - [通讯](#通讯)
+    - [调试工具](#调试工具)
+    - [日志](#日志)
+    - [数据库驱动](#数据库驱动)
     - [ORM](#orm)
-    - [Web框架](#web-frameworks)
-    - [应用服务](#application-servers)
-    - [CMS](#content-management-system)
+    - [Web框架](#web框架)
     - [RESTful API](#restful-api)
-    - [文件和MIME类型操作](#files-and-mime-type-manipulation)
-    - [验证和OAuth](#authentication-and-oauth)
-    - [模版引擎](#template-engine)
-    - [生成CLI的工具](#tools-for-building-clis)
-    - [异步流程控制](#async-control-flow)
-    - [测试](#testing)
-- [其它精彩列表](#other-awesome-lists)
+    - [应用服务](#应用服务)
+    - [CMS](#cms)
+    - [表单](#表单)
+    - [文件和MIME类型操作](#文件和mime类型操作)
+    - [验证和OAuth](#验证和oauth)
+    - [模版引擎](#模版引擎)
+    - [生成CLI的工具](#生成cli的工具)
+    - [异步流程控制](#异步流程控制)
+    - [Rate Limiting](#rate-limiting)
+    - [测试](#测试)
+    - [杂项](#杂项)
+- [其它精彩列表](#其它精彩列表)
 
-## Environment Management
 ## 环境管理
 
-*Libraries for Node version and environment management.*
+*Node虚拟机*
 
-*管理Node版本和环境的库*
+* [nodeenv](https://github.com/ekalinin/nodeenv) - Node.js的虚拟环境,提供独立的Node.js运行环境(Python)
+* [nave](https://github.com/isaacs/nave) - Node的虚拟环境(sh脚本)
 
-* [nodeenv](https://github.com/ekalinin/nodeenv) - Virtual environment for Node.js & integrator with virtualenv.
+*Node版本管理*
 
-    独立的Node.js运行环境(Python写，未使用过)
+* [n](https://github.com/visionmedia/n) - Node版本管理，可以安装不同版本的node，可以多个版本的node并存
+* [nvm](https://github.com/creationix/nvm) - Node版本管理器(不用装node即可使用).
 
-* [nave](https://github.com/isaacs/nave) - Virtual Environments for Node.
-
-    似乎不错(sh脚本，未使用过)
-
-* [n](https://github.com/visionmedia/n) - Node version management.
-
-    安装不同版本的node，可以多个版本的node并存
+*[n vs nvm](http://www.mattpalmerlee.com/2013/03/23/installing-and-switching-between-multiple-versions-of-node-js-n-vs-nvm/)个人喜欢：n
     
-## Desktop App
 ## 桌面应用
 
-* [atom-shell](https://github.com/atom/atom-shell) -
+* [Atom Shell](https://github.com/atom/atom-shell) -
 可以使用nodejs编写桌面应用，并且跨平台，支持mac，linux，windows，与[node-webkit](https://github.com/rogerwang/node-webkit)的区别在于，前者启动时是启动js文件，后者启动html文件，前者可控性更高。
 
 node-webkit案例:[LightTable](https://github.com/LightTable/LightTable)
 atom-shell案例:[Atom](https://github.com/atom/atom)
 
 
-## Integrated Development Enviroments
 ## 集成开发环境
 
-*IDEs and Editors for development*
+*开发用的IDE和编辑器*
 
-* [Enide](http://www.nodeclipse.org/enide/) - Node Eclipse IDE with Nodeclipse plugin.
-* [InteliJIDEA](http://www.jetbrains.com/idea/features/nodejs.html) - Fast Node plugin for InteliJ.
-* [Webstorm](http://www.jetbrains.com/webstorm/features/#node.js) - "Create great websites and applications in a great IDE. The best JavaScript IDE and HTML editor is at your service."
-* [Atom](https://github.com/atom/atom) - The hackable editor by GitHub
-* [Brackets](https://github.com/adobe/brackets) - An open source code editor for the web, written in JavaScript, HTML and CSS.
-* [Cloud9](https://c9.io/site/code-smarter-code-together/) - Web editor with collaboration tools.
-* [Notepad++](http://notepad-plus-plus.org) - Notepad++ is a free source code editor and Notepad replacement that supports several languages.
-* [CmdEr](https://github.com/bliker/cmder) - Not really and IDE, but a great "lovely console emulator package for Windows"
+* [Webstorm](http://www.jetbrains.com/webstorm/features/#node.js) - 最好的Nodejs编辑器，有的话就不用看下面这些了。
+* [Visual Studio](http://www.visualstudio.com/) - 需要安装插件 [Node.js Tools for Visual Studio](https://nodejstools.codeplex.com/) (支持编辑，智能感知，分析，npm，TypeScript，本地调试以及Windows/MacOS/Linux上的远程调试)。
+* [Enide](http://www.nodeclipse.org/enide/) - 带Nodeclipse插件的Node Eclipse IDE。
+* [InteliJIDEA](http://www.jetbrains.com/idea/features/nodejs.html) - InteliJ的Node.js插件，和Webstorm同一家公司出品。
+* [Atom](https://github.com/atom/atom) - Github出品的可自定义编辑器(用Atom Shell开发的)。
+* [Brackets](https://github.com/adobe/brackets) - 使用JavaScript,HTML,CSS编写的开源web代码编辑器。
+* [Cloud9](https://c9.io) - 带协作工具的web编辑器。
+* [Notepad++](http://notepad-plus-plus.org) - Notepad++就不用解释了，能用这个写代码的都明白这是什么。
+* [CmdEr](https://github.com/bliker/cmder) - 不是IDE，但是Windows上的控制台模拟器（用这个不如安装Github的git shell）。
+* [Cloud Commander](http://cloudcmd.io) - Web文件管理。有编辑器和控制台。可以让你开发Web应用，站点等。
 
-## Documentation
 ## 文档
 
-*Libraries for generating project documentation.*
+*项目文档生成库*
 
-* [Docco](http://jashkenas.github.io/docco/) - Docco is a quick-and-dirty documentation generator, written in Literate CoffeeScript.
-* [Groc](https://github.com/nevir/groc) - Documentation generation, in the spirit of literate programming.
-* [dox](https://github.com/visionmedia/dox) - JavaScript documentation generator for node using markdown and jsdoc.
+* [Docco](http://jashkenas.github.io/docco/) - Docco是一个快速但是丑陋的文档生成器, 由Literate CoffeeScript编写。
+* [Groc](https://github.com/nevir/groc) - 以文学编程为宗旨的文档生成器。
+* [dox](https://github.com/visionmedia/dox) - JavaScript文档生成器，使用markdown和jsdoc生成node文档。
 
-## Package Management
 ## 包管理
 
-*Libraries for package and dependency management.*
+*包和依赖管理库*
 
-* [Npm](https://www.npmjs.org/) - Default package manager. Installs, publishes and manages node programs.
+* [Npm](https://www.npmjs.org/) - 默认包管理工具。安装，发布，管理node程序。（必用！识node不识npm犹如识.net不识nuget）
 
-## Build Tools
 ## 生成工具
 
-*Libraries for building and task running*
+*生成和任务执行工具*
 
-* [Gulp.js](http://gulpjs.com/) - A streaming build system which use of streams and code-over-configuration.
-* [Grunt.js](http://gruntjs.com/) - A task runner to ease epetitive tasks like unit testing, compilation and so on.
-* [Nodemon](http://nodemon.io/) - A dev utility that monitor any changes in source and automatically restart server.
+* [Gulp.js](http://gulpjs.com/) - 流生成系统，基于流和代码胜于配置。
+* [Grunt.js](http://gruntjs.com/) - 任务执行器，可简化单元测试，编译等任务。
 
-## Communication
+*后端Grunt前端Bower，近乎标配，但是google的web starter kit更推荐gulp，因为gulp基于js,grunt基于json，孰优孰劣，可见一斑* 
+
+* [Nodemon](http://nodemon.io/) - 监控代码变化，自动重启服务器的开发工具。
+* [Browserify](http://browserify.org/) - Browserify让你可以在浏览器中使用require('modules')来打包你的依赖。
+
 ## 通讯
 
-* [Socket.IO](http://socket.io/) - Websocket framework for Node and Javascript.
-* [Primus](https://github.com/primus/primus) - An abstraction layer for real-time frameworks to prevent module lock-in.
+* [Socket.IO](http://socket.io/) - Node和Javascript的Websocket框架。
+* [SockJS](https://github.com/sockjs) - Websocket模拟器.
+* [Primus](https://github.com/primus/primus) - 阻止模块锁住的实时框架抽象层。
+* [BinaryJS](http://binaryjs.com/) - BinaryJS是处理实时二进制数据的二进制webscoket。
 
-## Database Drivers
-## 数据库驱动
-
-*Libraries for connecting and operating databases*
-
-* [Node-mysql](https://github.com/felixge/node-mysql/) - A pure node.js JavaScript Client implementing the MySql protocol.
-* [Node-mongodb-native](https://github.com/mongodb/node-mongodb-native/) - Mongo DB Native NodeJS Driver.
-
-## Debugging Tools
 ## 调试工具
 
-*Tools for debugging Node applications*
+*调试Node应用的工具*
 
-* [node-inspector](https://github.com/node-inspector/node-inspector) - Node.js debugger based on Blink Developer Tools.
-* [longjohn](https://github.com/mattinsler/longjohn) - Longer stack traces for Node.
-* [TypesJs](https://github.com/ChrisAntaki/typesjs) - Easy type checking, for Node & browsers.
+* [node-inspector](https://github.com/node-inspector/node-inspector) - 基于Blink开发工具的Node.js调试器。
+* [longjohn](https://github.com/mattinsler/longjohn) - Node的长堆栈跟踪器。
+* [TypesJs](https://github.com/ChrisAntaki/typesjs) - Node和浏览器的简易类型检查。
+* [Nodev](https://github.com/akamensky/nodev) - 基于nodemon和node-inspector的更方便的调试工具。
+* [cf-node-debug](https://www.npmjs.org/package/cf-node-debug) - 用来帮助调试运行在Paas上的node的代理。
 
-## Logging
 ## 日志
 
-*Tools for generating and working with log files.*
+*生成和管理日志的工具*
 
-* [caterpillar](https://github.com/bevry/caterpillar) - A logging system that can log and pipe the output off to different locations.
-* [tracer](https://github.com/baryon/tracer) - A powerful and customizable logging library for node.js.
-* [Log.io](http://logio.org/) - Real time logging facility on the browser.
+* [winston](https://github.com/flatiron/winston) 好用的日志生成库。
+* [caterpillar](https://github.com/bevry/caterpillar) - 可以记录日志和输出到不同目标的日志系统。
+* [tracer](https://github.com/baryon/tracer) - Node.js的强力和可自定义日志库。
+* [Log.io](http://logio.org/) - 浏览器上的实时日志工具。
+* [Bunyan](https://github.com/trentm/node-bunyan) - Node.js服务的简单高效JSON日志模块。
+
+## 数据库驱动
+
+*连接和操作数据库的库*
+
+* [Node-mysql](https://github.com/felixge/node-mysql/) - 连接mysql的不二选择。
+* [mongojs](https://github.com/mafintosh/mongojs) - 连接mongodb的不二选择，mongoose过于复杂，完全没必要。这个库是基于[Node-mongodb-native](https://github.com/mongodb/node-mongodb-native/)的封装。
+* [Node-redis](https://github.com/mranney/node_redis) - Redis驱动，原生解析器用[hideredis](https://github.com/redis/hiredis-node),基于Promise的API用 [then-redis](https://github.com/mjackson/then-redis)。
 
 ## ORM
 
-*Libraries that implement Object-Relational Mapping or datamapping techniques.*
+*实现ORM或datamapping技术的库*
 
-* [Sequelize](http://sequelizejs.com/) - Sequelize library provides easy access to MySQL, MariaDB, SQLite or PostgreSQL databases.
-* [Node-orm2](https://github.com/dresende/node-orm2) - Another Relational Object Mapper.
-* [Mongoose](http://mongoosejs.com/) - Almost an ORM for mongodb.
+* [Sequelize](http://sequelizejs.com/) - 方便地访问MySQL, MariaDB, SQLite 以及PostgreSQL数据库。
+* [Node-orm2](https://github.com/dresende/node-orm2) - 另一个ORM。
+* [Mongoose](http://mongoosejs.com/) - mongodb的ORM。
+* [Waterline](https://github.com/balderdashy/waterline) - 简化多个数据库的交互。
 
-## Web Frameworks
 ## Web框架
 
-*Web development frameworks.*
+*Web开发框架*
 
-* [Express](http://expressjs.com/) -  A minimal and flexible node.js web application framework.
-* [Flatiron](http://flatironjs.org/) - An adaptable framework for building modern web applications.
-* [Koa](http://koajs.com/) - A framework which aims to be a smaller, more expressive, and more robust foundation for web applications.
-* [Totaljs](http://www.totaljs.com/) - Friendly responsive design web application framework for node.
-* [Meteor](https://www.meteor.com/) - A platform that has strong features such as live page update, sync and hopt code pushes.
-* [Hapi](https://github.com/spumko/hapi) - A rich framework for building applications and services.
-
-## Application Servers
-## 应用服务
-
-*Application Server is an environment to run and manage multiple applications.*
-
-* [Impress](https://github.com/tshemsedinov/impress) - Impressive multipurpose scalable Application Server optimized for high load API and web applications.
-
-## Content Management System
-## CMS
-
-* [Calipso](http://calip.so/) - Calipso is a simple CMS, built along similar themes to Drupal and Wordpress.
+* [Express](http://expressjs.com/) -  小而全的Nodejs web开发框架。主流！但原作者跑去写Go了。
+* [Flatiron](http://flatironjs.org/) - 编写现代化web应用的可适配框架。
+* [Koa](http://koajs.com/) - 旨在打造更小，更便捷，更高扩展的web应用框架。Express原班人马打造，下一代框架。
+* [Totaljs](http://www.totaljs.com/) - 高响应的node web应用框架。
+* [Meteor](https://www.meteor.com/) - 实时web应用框架。获得1120万美元风投。未来的框架。
+* [Derby](https://github.com/derbyjs/derby) - 方便编写实时应用的MVC框架。
+    * [Derby-awesome](https://github.com/onerussell/awesome-derby) - 好用的Derby组件。
+* [HuntJS](https://huntjs.herokuapp.com/) - 事件驱动框架。
+* [Pomelo](https://github.com/NetEase/pomelo) - 网易出品的Nodejs游戏开发框架。
 
 ## RESTful API
 
-*Libraries for developing RESTful APIs.*
+*开发RESTful API的库*
 
-* [Sails](http://sailsjs.org) - MVC framework which generates a RESTful JSON API.
-* [Node-restify](http://mcavage.me/node-restify/) - A node.js module built specifically to build correct REST web services.
-* [Heimdall](https://github.com/binarymax/heimdall) - REST API Guardian for Express.
+* [Hapi](https://github.com/spumko/hapi) - Restful API的快速框架。
+    * [hapi-swagger](https://github.com/glennjones/hapi-swagger)生成api文档。
+* [Sails](http://sailsjs.org) - 生成RESTful JSON API的MVC框架。
+* [Node-restify](http://mcavage.me/node-restify/) - 生成REST web服务的node模块。
+* [Heimdall](https://github.com/binarymax/heimdall) - Express的REST API插件。
 
-## Files and MIME Type Manipulation
+## 应用服务
+
+*运行和管理多个应用*
+
+* [PM2](https://github.com/Unitech/pm2) - 必用!生产环境中的不二法宝。管理多个node进程，崩溃自动重启，日志查看等功能。
+* [Impress](https://github.com/tshemsedinov/impress) - 高负载，可扩展的应用服务。
+
+## CMS
+
+* [Calipso](http://calip.so/) - 简易CMS，类似Drupal和Wordpress的皮肤。
+* [KeystoneJS](http://keystonejs.com/) - Node.js CMS，由Express和MongoDB构建的Web应用平台。 
+
+## 表单
+
+*处理表单和表单数据的库*
+
+* [node-validator](https://github.com/chriso/validator.js) - 简易字符串表单验证库。
+* [express-validator](https://github.com/ctavan/express-validator) - Express表单验证中间件。
+
 ## 文件和MIME类型操作
 
-* [PDFKit](http://pdfkit.org/) - A JavaScript PDF generation library for Node and browser.
+* [PDFKit](http://pdfkit.org/) - Node和浏览器的JavaScript PDF生成库。
 
-## Authentication and OAuth
 ## 验证和OAuth
 
-*Libraries for implementing authentications schemes.*
+*实现验证的库*
 
-* [PassportJS](http://passportjs.org/) - Simple authentication middleware framework.
-* [ldapjs](http://ldapjs.org/) - Pure JavaScript, from-scratch framework for implementing LDAP clients and servers.
+* [PassportJS](http://passportjs.org/) - 简易验证中间件库。
+* [ldapjs](http://ldapjs.org/) - 纯JavaScript框架，用来实现LDAP客户端和服务端。
+* [oauth-signature-js](https://github.com/bettiolo/oauth-signature-js) - OAuth 1.0a签名生成器。
+* [Lockit](https://github.com/zemirco/lockit) - Express的全功能验证方案。
 
-## Template Engine
 ## 模版引擎
 
-*Libraries and tools for templating and lexing.*
+*模版和词法工具*
 
-* [ECT](http://ectjs.com/) - "Fastest JavaScript template engine with embedded CoffeeScript syntax" as they say (benchmark proof).
-* [Jade](http://jade-lang.com/) - Handful node template engine.
-* [Swig](http://paularmstrong.github.io/swig/) - A simple, powerful, and extendable JavaScript Template Engine.
+* [ECT](http://ectjs.com/) - "内嵌CoffeScript语法的快速JavaScript模版引擎。"
+* [Jade](http://jade-lang.com/) - node模版引擎。
+* [Swig](http://paularmstrong.github.io/swig/) - 简单，强大，易扩展的JavaScript模版引擎。
 
-## Tools for building CLIs
 ## 生成CLI的工具
 
-*Libraries and tools which support you by building Command-Line Interfaces.*
+*命令行接口生成工具*
 
-* [Inquirer](https://github.com/SBoudrias/Inquirer.js) - A collection of common interactive command line user interfaces. *Ask questions, parsing, validating answers, managing hierarchical prompts and providing error feedback.*
-* [commander.js](https://github.com/visionmedia/commander.js) - The complete solution for node.js command-line interfaces, inspired by Ruby's commander.
-* [cli-table](https://github.com/LearnBoost/cli-table) - Pretty unicode tables for the CLI with Node.JS
-* [blessed](https://github.com/chjj/blessed) - A curses-like library for node.js.
-* [chalk](https://github.com/sindresorhus/chalk) - Terminal string styling done right
-* [minimist](https://github.com/substack/minimist) - Simple module for command line arguments parsing.
-* [read](https://github.com/isaacs/read) - For reading user input from stdin.
-* [colors.js](https://github.com/Marak/colors.js) - get colors in your node.js console like what.
-* [configstore](https://github.com/yeoman/configstore) - Easily load and persist config without having to think about where and how.
-* [blessed](https://github.com/chjj/blessed) - A curses-like library for node.js.
-* [log-symbols](https://github.com/sindresorhus/log-symbols) - Colored symbols for various log levels.https://github.com/sindresorhus/log-symbols
-* [terminal-menu](https://github.com/substack/terminal-menu) - retro ansi terminal menus for serious 80s technicolor business.
-* [cli-spinner](https://github.com/helloIAmPau/node-spinner) - A simple spinner for node cli.
-* [text-table](https://github.com/substack/text-table) - generate borderless text table strings suitable for printing to stdout.
+* [Inquirer](https://github.com/SBoudrias/Inquirer.js) - 常用交互命令行用户接口集合。*提问，解析，验证回答，管理提示符以及提供错误反馈。*
+* [commander.js](https://github.com/visionmedia/commander.js) - 受Ruby的commander启发的，node.js命令行接口的完整解决方案。
+* [cli](https://github.com/chriso/cli) - 可用node快速生成命令行应用。
+* [cli-table](https://github.com/LearnBoost/cli-table) - CLI的美化unicode表格。
+* [blessed](https://github.com/chjj/blessed) - 一个类似魔咒的node.js类库。
+* [chalk](https://github.com/sindresorhus/chalk) - 终端字符串样式。
+* [minimist](https://github.com/substack/minimist) - 命令行参数解析简易模块。
+* [read](https://github.com/isaacs/read) - 读取用户stdin输入。
+* [colors.js](https://github.com/Marak/colors.js) - node.js控制台颜色。
+* [configstore](https://github.com/yeoman/configstore) - 简易读取，存储配置。
+* [blessed](https://github.com/chjj/blessed) - 一个类似魔咒的node.js类库。
+* [log-symbols](https://github.com/sindresorhus/log-symbols) - 不同日志层级不同颜色表示。https://github.com/sindresorhus/log-symbols
+* [terminal-menu](https://github.com/substack/terminal-menu) - ansi终端菜单。
+* [cli-spinner](https://github.com/helloIAmPau/node-spinner) - 简易的node cli插件。
+* [text-table](https://github.com/substack/text-table) - 生成无边框的文本表格字符串用来输出。
 
-## Async Control Flow
 ## 异步流程控制
 
-*Libraries, that help you manage asyncronous control flow and avoid callback hell.*
+*管理异步控制，避免回调地狱*
 
-* Callback-based:
-    * [Async](https://github.com/caolan/async) - Utility module which provides straight-forward, powerful functions for working with asynchronous JavaScript.
-* Promise-based ([Promises/A+](http://promises-aplus.github.io/promises-spec/)):
-    * [Q](https://github.com/kriskowal/q) - Full-featured promise library with large API covering any situation you may encounter.
-    * [RSVP.js](https://github.com/tildeio/rsvp.js) - Lightweight, but still compliant, promise library.
-    * [when.js](https://github.com/cujojs/when) - Rock solid, battle tested promise library.
-    * [Bluebird](https://github.com/petkaantonov/bluebird) - Bluebird is a fully featured promise library with focus on innovative features and performance.
-* Fibers-base ([node-fibers](https://github.com/laverdet/node-fibers/)):
-    * [asyncawait](https://github.com/yortus/asyncawait) - Inspired by C# async/await feature, implementation of the same patter using fibers.
-* Generator-based:
-    * [Co](https://github.com/visionmedia/co) - Generator based flow-control goodness for nodejs and the browser.
+* 基于回调:
+    * [Async](https://github.com/caolan/async) - 直接的，功能强大的异步jas模块。好用！
+    * [node-seq](https://github.com/substack/node-seq) - nodejs链式异步流程，并行，以及pipeline式的错误处理。
+* 基于Promise ([Promises/A+](http://promises-aplus.github.io/promises-spec/)):
+    * [Q](https://github.com/kriskowal/q) - 拥有大量API，包含各种场景的功能完整的promise库。
+    * [RSVP.js](https://github.com/tildeio/rsvp.js) - 轻量级，但是可以使用的promise库。
+    * [when.js](https://github.com/cujojs/when) - 常用的promise库。
+    * [Bluebird](https://github.com/petkaantonov/bluebird) - Bluebird是关注于创新功能和性能的全功能promise库。
+* 基于Fibers ([node-fibers](https://github.com/laverdet/node-fibers/)):
+    * [asyncawait](https://github.com/yortus/asyncawait) - 参考C#的async/await功能，实现相同的模式。
+* 基于生成器:
+    * [Co](https://github.com/visionmedia/co) - 基于生成器的流程控制。
 
-## Testing
+## Rate Limiting
+
+*Libraries that help restrict the frequency of certain actions.*
+
+* [Bottleneck](https://github.com/SGrondin/bottleneck) - A powerful rate limiter that makes throttling easy.
+
 ## 测试
 
-*Testing frameworks.*
+*测试框架*
 
-* [mocha](https://github.com/visionmedia/mocha) - Mocha is a feature-rich JavaScript test framework running on node.js and the browser, making asynchronous testing simple and fun.
-* [tape](https://github.com/substack/tape) - tap-producing test harness for node and browsers.
-* [should.js](https://github.com/visionmedia/should.js) - BDD style assertions for node.js -- test framework agnostic.
-* [chai](https://github.com/chaijs/chai) - BDD / TDD assertion framework for node.js and the browser that can be paired with any testing framework.
+* [mocha](https://github.com/visionmedia/mocha) - Mocha是一个运行在node.js上的功能齐全的JavaScript测试框架，使异步测试方便而有趣。
+* [tape](https://github.com/substack/tape) - 为node和浏览器定制的测试。
+* [should.js](https://github.com/visionmedia/should.js) - nodejs的BDD风格断言。
+* [chai](https://github.com/chaijs/chai) - BDD / TDD 断言框架，可与任何其它框架配套使用。
+* [sinon](http://sinonjs.org/) - 独立的Javascript测试间谍, stub以及mock。
+* [Jasmine](http://jasmine.github.io/) - 简易的Node和Javascript的行为测试。
+* [Expresso](http://visionmedia.github.io/expresso/) - Node的TDD框架。
+* [NodeUnit](https://github.com/caolan/nodeunit) - 简单语法的单元测试工具。
+* [Concrete](http://ryankee.github.io/concrete/) - CI服务。
+* [ready.js](http://dsimard.github.io/ready.js/) - javascript CI工具。
+* [Jezebel](https://github.com/benrady/jezebel) - Jasmine测试的REPL以及持续集成测试工具。
 
-# Other Awesome Lists
+## 杂项
+
+* [Github Linker](https://chrome.google.com/webstore/detail/github-linker/jlmafbaeoofdegohdhinkhilhclaklkp) - Chrome扩展，提供github上package.json的依赖库的超链接。
+
+
 # 其它精彩列表
-Other amazingly awesome lists can be found in the [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness) list.
 
-# Contributing
+可以在[awesome-awesome](https://github.com/emijrp/awesome-awesome) 以及 [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness) 中找到其它精彩列表。
 
-Your contributions are always welcome!
+# 贡献
+
+欢迎您提出宝贵意见和建议！
