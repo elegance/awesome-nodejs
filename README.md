@@ -84,6 +84,7 @@ atom-shell案例:[Atom](https://github.com/atom/atom)
 *包和依赖管理库*
 
 * [Npm](https://www.npmjs.org/) - 默认包管理工具。安装，发布，管理node程序。（必用！识node不识npm犹如识.net不识nuget）
+* [Npmsafe](https://github.com/ueqt/npmsafe) - 因为npm安装存在钓鱼的风险，所以用这个库更安全。（必用！）
 
 ## 生成工具
 
