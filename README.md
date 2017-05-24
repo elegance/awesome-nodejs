@@ -1,3 +1,7 @@
+## TODO
+* [sindresorhus:awesome-nodejs](https://github.com/sindresorhus/awesome-nodejs#logging)
+* 自己认为可以的再补充，认为不行的划线掉
+
 # 精彩的Node.js
 
 受到[精彩的php](https://github.com/ziadoz/awesome-php) 和 [精彩的python](https://github.com/vinta/awesome-python) 的启发，整理了精彩的Node.js的框架，库以及资源的列表。
